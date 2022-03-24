@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 438011935}
   - component: {fileID: 438011937}
   - component: {fileID: 438011938}
+  - component: {fileID: 438011939}
   m_Layer: 0
   m_Name: EarthAvatarArt
   m_TagString: Untagged
@@ -327,7 +328,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84984038834f35e4f968bcee1d74a6ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 438011939}
+--- !u!95 &438011939
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438011934}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8f9a8aed8f874441863ea7fb74bda98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +477,7 @@ GameObject:
   - component: {fileID: 1547817477}
   - component: {fileID: 1547817479}
   - component: {fileID: 1547817480}
+  - component: {fileID: 1547817481}
   m_Layer: 0
   m_Name: WaterAvatarArt
   m_TagString: Untagged
@@ -567,7 +588,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84984038834f35e4f968bcee1d74a6ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1547817481}
+--- !u!95 &1547817481
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547817476}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56880c66d6a18d14d97a6f2f20dbdba1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1655288223
 GameObject:
   m_ObjectHideFlags: 0
