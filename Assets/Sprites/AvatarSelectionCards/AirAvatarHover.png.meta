@@ -29,6 +29,27 @@ TextureImporter:
   - first:
       213: -905998985055901387
     second: AirAvatarHover_8
+  - first:
+      213: -5913094108619447411
+    second: AirAvatarHover_9
+  - first:
+      213: 3842317209341208299
+    second: AirAvatarHover_10
+  - first:
+      213: -2610410254721473972
+    second: AirAvatarHover_11
+  - first:
+      213: -7714434607964477178
+    second: AirAvatarHover_12
+  - first:
+      213: 3735902816264823826
+    second: AirAvatarHover_13
+  - first:
+      213: 6180244290724540847
+    second: AirAvatarHover_14
+  - first:
+      213: 1192139818568727833
+    second: AirAvatarHover_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -314,6 +335,153 @@ TextureImporter:
       bones: []
       spriteID: 539e0e829be3d63f0800000000000000
       internalID: -905998985055901387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AirAvatarHover_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d836844bc3870fda0800000000000000
+      internalID: -5913094108619447411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AirAvatarHover_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be62729f427a25530800000000000000
+      internalID: 3842317209341208299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AirAvatarHover_11
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c422a4134b5f5cbd0800000000000000
+      internalID: -2610410254721473972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AirAvatarHover_12
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6092c4dc892d0f490800000000000000
+      internalID: -7714434607964477178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AirAvatarHover_13
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214a8d651d798d330800000000000000
+      internalID: 3735902816264823826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AirAvatarHover_14
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1b5c52073a4c550800000000000000
+      internalID: 6180244290724540847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AirAvatarHover_15
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d336849d45b8010800000000000000
+      internalID: 1192139818568727833
       vertices: []
       indices: 
       edges: []

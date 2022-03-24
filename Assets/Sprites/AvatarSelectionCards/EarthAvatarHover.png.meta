@@ -23,6 +23,12 @@ TextureImporter:
   - first:
       213: 7679234758363198280
     second: EarthAvatarHover_6
+  - first:
+      213: -693482425105971725
+    second: EarthAvatarHover_7
+  - first:
+      213: -5092568194325785038
+    second: EarthAvatarHover_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -266,6 +272,48 @@ TextureImporter:
       bones: []
       spriteID: 843321f835f129a60800000000000000
       internalID: 7679234758363198280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthAvatarHover_7
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5059998614066f0800000000000000
+      internalID: -693482425105971725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthAvatarHover_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23652c675309359b0800000000000000
+      internalID: -5092568194325785038
       vertices: []
       indices: 
       edges: []
