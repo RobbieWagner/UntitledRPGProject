@@ -33,7 +33,7 @@ public class AvatarCards : MonoBehaviour
     {
         if(mouseOver && Input.GetMouseButtonDown(0) && ((gameObject.transform.Find("BlankCard")) == null))
         {
-            SceneManager.LoadScene("OpeningScene");
+            SceneManager.LoadScene("IntroductionScene");
         }
     }
 }
