@@ -49,4 +49,27 @@ public class DialogueReader : MonoBehaviour
         dialogueText.text = "";
         StopCoroutine(ReadDialogue(path));
     }
+
+    public IEnumerator ReadDialogue(string path, bool running)
+    {
+        running = true;
+        StreamReader dialogueReader = new StreamReader(path);
+        string line;
+
+        while((line = dialogueReader.ReadLine()) != " ")
+        {
+            dialogueText.text = line;
+            yield return new WaitForSeconds(.35f);
+            while((line = dialogueReader.ReadLine()) != "~")
+            {
+                dialogueText.text = line;
+                yield return new WaitForSeconds(.35f);
+            }
+        }
+
+        dialogueText.text = "";
+        running = false;
+        StopCoroutine(ReadDialogue(path));
+    }
+
 }
