@@ -5,25 +5,31 @@ using UnityEngine;
 public class OpeningCinematic : MonoBehaviour
 {
 
-    public GameObject dandelion;
-    public string logoPath;
-
-    public DialogueReader dialogueRead;
-    private bool running;
+    public GameObject CompanyLogoReader;
+    public PrintToDialogueReader textSender;
 
     // Start is called before the first frame update
     void Start()
     {
-        running = false;
+        StartCoroutine(DisplayOpeningLogo());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(!textSender.running)
+        {
+            CompanyLogoReader.SetActive(false);
+        }
     }
 
-    // write an algorithm that runs different dialogues right after the other
-        // string list of paths. Wait for the last to be over, and maybe a few other things before the next plays
-        //used for the opening cinematic. Plays fake company logo, introduction, and then puts up the game menu
+    IEnumerator DisplayOpeningLogo()
+    {
+        yield return new WaitForSeconds(3f);
+        CompanyLogoReader.SetActive(true);
+
+        yield return StartCoroutine(textSender.SendDialogue());
+
+        StopCoroutine(DisplayOpeningLogo());
+    }
 }
