@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class CreateAvatarCards : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject hasOpeningCinematic;
+    OpeningCinematic openingCinematic;
+    public GameObject airAvatarCard;
+    public GameObject button;
+    public GameObject selectElementText;
+
     void Start()
     {
-        
+        hasOpeningCinematic = GameObject.Find("RunsOpeningCinematic(Clone)");
+
+        if(hasOpeningCinematic != null)
+        {
+            openingCinematic = hasOpeningCinematic.GetComponent<OpeningCinematic>();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void buttonPressed()
     {
-        
+        if(openingCinematic != null && openingCinematic.timesBooted == 0)
+        {
+            Instantiate(airAvatarCard);
+            selectElementText.SetActive(true);
+        }
+
+        button.SetActive(false);
     }
+
 }
