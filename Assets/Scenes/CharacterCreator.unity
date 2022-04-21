@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066671136}
   - component: {fileID: 1066671135}
+  - component: {fileID: 1066671137}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -179,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -199,12 +200,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066671134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3946833, y: -0.8554624, z: -69.11995}
+  m_LocalPosition: {x: -4.96, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1066671137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066671134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934c23d588a72cb49bc2a20e4a03e506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementType: 0
+  typePassed: 0
+  spriteArray:
+  - {fileID: 21300000, guid: 90071f52a2202d44882b12f548fe8a83, type: 3}
+  - {fileID: 21300000, guid: 75be7af51cb656343a10aeb84a8c4150, type: 3}
+  - {fileID: 21300000, guid: 3bc8960eabe021349b2170240f77eca2, type: 3}
+  - {fileID: 21300000, guid: ac6aa00d0da174244bcc5e52afb040de, type: 3}
 --- !u!1001 &1595389696
 PrefabInstance:
   m_ObjectHideFlags: 0

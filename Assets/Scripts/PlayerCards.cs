@@ -8,6 +8,10 @@ public class PlayerCards : MonoBehaviour
 
     public Animator animator;
     private bool mouseOver;
+    public int elementType;
+    GameObject player;
+
+    InitializeCharacter characterCreatorInitialization;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +35,21 @@ public class PlayerCards : MonoBehaviour
 
     void Update()
     {
-        if(mouseOver && Input.GetMouseButtonDown(0) && ((gameObject.transform.Find("BlankCard")) == null))
+        if(mouseOver && Input.GetMouseButtonDown(0))
         {
+            DontDestroyOnLoad(this.gameObject);
             SceneManager.LoadScene("CharacterCreator");
+        }
+
+        player = GameObject.Find("Player");
+
+        if(player != null)
+        {
+            characterCreatorInitialization = player.GetComponent<InitializeCharacter>();
+            characterCreatorInitialization.elementType = elementType;
+            characterCreatorInitialization.typePassed = true;
+
+            GameObject.Destroy(this.gameObject);
         }
     }
 }
