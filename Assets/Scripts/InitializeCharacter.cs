@@ -7,7 +7,11 @@ public class InitializeCharacter : MonoBehaviour
 
     public int elementType;
     public bool typePassed;
-    public Sprite[] spriteArray;
+    public Sprite[] baseSprites;
+
+    public SpriteRenderer hair;
+    public int hairIndex;
+    public Sprite[] hairstyles;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +24,10 @@ public class InitializeCharacter : MonoBehaviour
     {
         if(typePassed)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[elementType];
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = baseSprites[elementType];
+            hairIndex = Random.Range(0, hairstyles.Length);
+            hair.sprite = hairstyles[hairIndex];
+            typePassed = false;
         }
     }
 }
