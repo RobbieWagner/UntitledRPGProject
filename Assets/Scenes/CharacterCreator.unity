@@ -152,9 +152,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934c23d588a72cb49bc2a20e4a03e506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterCustomizer: {fileID: 973989411}
   player: {fileID: 1066671134}
   elementType: 0
   typePassed: 0
+  baseSprites:
+  - {fileID: 21300000, guid: 90071f52a2202d44882b12f548fe8a83, type: 3}
+  - {fileID: 21300000, guid: 75be7af51cb656343a10aeb84a8c4150, type: 3}
+  - {fileID: 21300000, guid: 3bc8960eabe021349b2170240f77eca2, type: 3}
+  - {fileID: 21300000, guid: ac6aa00d0da174244bcc5e52afb040de, type: 3}
+  hair: {fileID: 412005553}
   hairIndex: 0
 --- !u!4 &30905240
 Transform:
@@ -352,11 +359,11 @@ RectTransform:
   m_Father: {fileID: 1836449519}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -23.1, y: -34.6}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 90}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &732150668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +407,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732150669}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973989411}
+        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
+        m_MethodName: HairstyleChange
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &732150669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,12 +487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e167ce1a2e5dd0408c36c319c7c52fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hairIndex: 0
-  baseSprites:
-  - {fileID: 21300000, guid: 90071f52a2202d44882b12f548fe8a83, type: 3}
-  - {fileID: 21300000, guid: 75be7af51cb656343a10aeb84a8c4150, type: 3}
-  - {fileID: 21300000, guid: 3bc8960eabe021349b2170240f77eca2, type: 3}
-  - {fileID: 21300000, guid: ac6aa00d0da174244bcc5e52afb040de, type: 3}
+  player: {fileID: 1066671134}
+  characterInitialization: {fileID: 30905239}
   hairstyles:
   - {fileID: 21300000, guid: 412129eaf28b2a541a3b75708e630a9e, type: 3}
   - {fileID: 21300000, guid: fab4e82156da8da4289bd8fed5d0fe2d, type: 3}
@@ -488,6 +503,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 93d7f6261cdba9f498d9885c490a582f, type: 3}
   - {fileID: 21300000, guid: a6ae6c5b022e4e04eb7c91448e4fedd0, type: 3}
   - {fileID: 21300000, guid: 13e6e1700e31a49448d9025a1c717f56, type: 3}
+  hair: {fileID: 412005553}
+  hairIndex: 0
 --- !u!4 &973989412
 Transform:
   m_ObjectHideFlags: 0
@@ -698,11 +715,11 @@ RectTransform:
   m_Father: {fileID: 1836449519}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -187, y: -34.600006}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -160, y: 90}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1294764271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -746,7 +763,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1294764272}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973989411}
+        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
+        m_MethodName: HairstyleChange
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1294764272
 MonoBehaviour:
   m_ObjectHideFlags: 0
