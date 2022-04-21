@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class AvatarCards : MonoBehaviour
+public class PlayerCards : MonoBehaviour
 {
 
     public Animator animator;
@@ -33,7 +33,7 @@ public class AvatarCards : MonoBehaviour
     {
         if(mouseOver && Input.GetMouseButtonDown(0) && ((gameObject.transform.Find("BlankCard")) == null))
         {
-            SceneManager.LoadScene("IntroductionScene");
+            SceneManager.LoadScene("CharacterCreator");
         }
     }
 }
