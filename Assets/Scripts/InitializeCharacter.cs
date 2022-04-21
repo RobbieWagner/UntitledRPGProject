@@ -5,18 +5,26 @@ using UnityEngine;
 public class InitializeCharacter : MonoBehaviour
 {
 
+    CharacterCustomizer characterCustomizer;
+
+    public GameObject player;
+
     public int elementType;
     public bool typePassed;
-    public Sprite[] baseSprites;
+    Sprite[] baseSprites;
 
-    public SpriteRenderer hair;
+    SpriteRenderer hair;
     public int hairIndex;
-    public Sprite[] hairstyles;
+    Sprite[] hairstyles;
 
     // Start is called before the first frame update
     void Start()
     {
         typePassed = false;
+        hairIndex = Random.Range(0, hairstyles.Length);
+
+        baseSprites = characterCustomizer.baseSprites;
+        hairstyles = characterCustomizer.hairstyles;
     }
 
     // Update is called once per frame
@@ -24,8 +32,7 @@ public class InitializeCharacter : MonoBehaviour
     {
         if(typePassed)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = baseSprites[elementType];
-            hairIndex = Random.Range(0, hairstyles.Length);
+            player.GetComponent<SpriteRenderer>().sprite = baseSprites[elementType];
             hair.sprite = hairstyles[hairIndex];
             typePassed = false;
         }

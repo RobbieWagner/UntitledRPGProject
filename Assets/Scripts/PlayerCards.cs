@@ -41,7 +41,7 @@ public class PlayerCards : MonoBehaviour
             SceneManager.LoadScene("CharacterCreator");
         }
 
-        player = GameObject.Find("Player");
+        player = GameObject.Find("PlayerInitializer");
 
         if(player != null)
         {
