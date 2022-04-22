@@ -171,13 +171,13 @@ public class CharacterCustomizer : MonoBehaviour
         if(up)
         {
             if(colorIndex == colors.Length-1) colorIndex = 0;
-            else colorIndex = colorIndex + 1;
+            else colorIndex++;
             Debug.Log(colorIndex + " before");
         }
         else
         {
             if(colorIndex == 0) colorIndex = colors.Length-1;
-            else colorIndex = colorIndex - 1;
+            else colorIndex--;
             Debug.Log(colorIndex + " before");
         }
 
