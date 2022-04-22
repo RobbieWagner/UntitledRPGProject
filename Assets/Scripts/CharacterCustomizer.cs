@@ -13,6 +13,8 @@ public class CharacterCustomizer : MonoBehaviour
     public Sprite[] bottoms;
     public Sprite[] shoes;
 
+    public Color[] colors;
+
     public SpriteRenderer hair;
     public int hairIndex;
     bool changedHairstyle;
@@ -134,6 +136,49 @@ public class CharacterCustomizer : MonoBehaviour
             else shoeIndex--;
             changedShoes = true;
         }
+    }
 
+    public void ColorChange(GameObject spriteGO, bool up)
+    {
+        SpriteRenderer sprite = spriteGO.GetComponent<SpriteRenderer>();
+        ColorContainer colorContainer = spriteGO.GetComponent<ColorContainer>();
+        int colorIndex = colorContainer.colorIndex;
+
+        if(up)
+        {
+            if(colorIndex == colors.Length-1) colorIndex = 0;
+            else colorIndex++;
+        }
+        else
+        {
+            if(colorIndex == 0) colorIndex = colors.Length-1;
+            else colorIndex--;
+        }
+
+        sprite.color = colors[colorIndex];
+    }
+
+    public void ColorChange(GameObject button)
+    {
+        CharacterCustomizerButtonInfo buttonInfo = button.GetComponent<CharacterCustomizerButtonInfo>();
+        GameObject spriteGO = buttonInfo.spriteGO;
+        SpriteRenderer sprite = spriteGO.GetComponent<SpriteRenderer>();
+        bool up = buttonInfo.up;
+
+        ColorContainer colorContainer = spriteGO.GetComponent<ColorContainer>();
+        int colorIndex = colorContainer.colorIndex;
+
+        if(up)
+        {
+            if(colorIndex == colors.Length-1) colorIndex = 0;
+            else colorIndex++;
+        }
+        else
+        {
+            if(colorIndex == 0) colorIndex = colors.Length-1;
+            else colorIndex--;
+        }
+
+        sprite.color = colors[colorIndex];
     }
 }
