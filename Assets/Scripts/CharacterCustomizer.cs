@@ -171,14 +171,17 @@ public class CharacterCustomizer : MonoBehaviour
         if(up)
         {
             if(colorIndex == colors.Length-1) colorIndex = 0;
-            else colorIndex++;
+            else colorIndex = colorIndex + 1;
+            Debug.Log(colorIndex + " before");
         }
         else
         {
             if(colorIndex == 0) colorIndex = colors.Length-1;
-            else colorIndex--;
+            else colorIndex = colorIndex - 1;
+            Debug.Log(colorIndex + " before");
         }
 
+        Debug.Log(colorIndex + " after");
         sprite.color = colors[colorIndex];
     }
 }
