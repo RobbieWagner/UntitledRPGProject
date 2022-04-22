@@ -162,13 +162,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3bc8960eabe021349b2170240f77eca2, type: 3}
   - {fileID: 21300000, guid: ac6aa00d0da174244bcc5e52afb040de, type: 3}
   hair: {fileID: 412005553}
-  hairIndex: 0
+  hairInfo: {fileID: 412005554}
   top: {fileID: 1800064868}
-  topIndex: 0
+  topInfo: {fileID: 1800064869}
   bottom: {fileID: 1369611673}
-  bottomIndex: 0
+  bottomInfo: {fileID: 1369611674}
   shoe: {fileID: 1245508084}
-  shoeIndex: 0
+  shoeInfo: {fileID: 1245508085}
 --- !u!4 &30905240
 Transform:
   m_ObjectHideFlags: 0
@@ -1483,6 +1483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorIndex: 0
+  clothingIndex: 0
   characterCustomizer: {fileID: 973989411}
 --- !u!1 &456690846
 GameObject:
@@ -2308,7 +2309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1066671134}
-  characterInitialization: {fileID: 30905239}
   hairstyles:
   - {fileID: 21300000, guid: 412129eaf28b2a541a3b75708e630a9e, type: 3}
   - {fileID: 21300000, guid: fab4e82156da8da4289bd8fed5d0fe2d, type: 3}
@@ -2353,6 +2353,7 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+  colorIndex: 0
   hair: {fileID: 412005553}
   hairIndex: 0
   top: {fileID: 1800064868}
@@ -2622,6 +2623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066671136}
   - component: {fileID: 1066671135}
+  - component: {fileID: 1066671137}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2698,6 +2700,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1066671137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066671134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8b2dd23ff6c324aaaccaabd74ddf2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1146027247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3169,6 +3183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorIndex: 0
+  clothingIndex: 0
   characterCustomizer: {fileID: 973989411}
 --- !u!1 &1294764269
 GameObject:
@@ -3399,6 +3414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorIndex: 0
+  clothingIndex: 0
   characterCustomizer: {fileID: 973989411}
 --- !u!1 &1395028932
 GameObject:
@@ -4162,6 +4178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorIndex: 0
+  clothingIndex: 0
   characterCustomizer: {fileID: 973989411}
 --- !u!1 &1836449515
 GameObject:

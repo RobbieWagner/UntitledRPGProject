@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CharacterCustomizer : MonoBehaviour
 {
-    public GameObject player;
+    //handles all of the character customization options including color or clothing and clothing options
 
-    public InitializeCharacter characterInitialization;
+    public GameObject player;
 
     public Sprite[] hairstyles;
     public Sprite[] tops;
@@ -37,8 +37,7 @@ public class CharacterCustomizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hairIndex = -1;
-        changedHairstyle = false;
+        player = GameObject.Find("Player");
 
         player.transform.localScale = new Vector3(1.5f, 1.5f, transform.localScale.z);
     }
@@ -46,26 +45,6 @@ public class CharacterCustomizer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hairIndex == -1)
-        {
-            hairIndex = characterInitialization.hairIndex;
-        }
-
-        if(topIndex == -1)
-        {
-            topIndex = characterInitialization.topIndex;
-        }
-
-        if(bottomIndex == -1)
-        {
-            bottomIndex = characterInitialization.bottomIndex;
-        }
-
-        if(shoeIndex == -1)
-        {
-            shoeIndex = characterInitialization.shoeIndex;
-        }
-
         if(changedHairstyle) hair.sprite = hairstyles[hairIndex];
         if(changedTop) top.sprite = tops[topIndex];
         if(changedBottom) bottom.sprite = bottoms[bottomIndex];
@@ -142,7 +121,7 @@ public class CharacterCustomizer : MonoBehaviour
     public void ColorChange(GameObject spriteGO, bool up)
     {
         SpriteRenderer sprite = spriteGO.GetComponent<SpriteRenderer>();
-        ColorContainer colorContainer = spriteGO.GetComponent<ColorContainer>();
+        ClothingInfo colorContainer = spriteGO.GetComponent<ClothingInfo>();
         colorIndex = colorContainer.colorIndex;
 
         if(up)
@@ -167,23 +146,20 @@ public class CharacterCustomizer : MonoBehaviour
         SpriteRenderer sprite = spriteGO.GetComponent<SpriteRenderer>();
         bool up = buttonInfo.up;
 
-        ColorContainer colorContainer = spriteGO.GetComponent<ColorContainer>();
+        ClothingInfo colorContainer = spriteGO.GetComponent<ClothingInfo>();
         colorIndex = colorContainer.colorIndex;
 
         if(up)
         {
-            Debug.Log(colorIndex + " before");
             if(colorIndex == colors.Length-1) colorIndex = 0;
             else colorIndex++;
         }
         else
-        {
-            Debug.Log(colorIndex + " before");    
+        { 
             if(colorIndex == 0) colorIndex = colors.Length-1;        
             else colorIndex--;
         }
 
-        Debug.Log(colorIndex + " after");
         sprite.color = colors[colorIndex];
         colorContainer.colorIndex = colorIndex;
     }
