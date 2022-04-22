@@ -14,6 +14,7 @@ public class CharacterCustomizer : MonoBehaviour
     public Sprite[] shoes;
 
     public Color[] colors;
+    public int colorIndex;
 
     public SpriteRenderer hair;
     public int hairIndex;
@@ -76,7 +77,7 @@ public class CharacterCustomizer : MonoBehaviour
         if(up)
         {
             if(hairIndex == hairstyles.Length-1) hairIndex = 0;
-            else hairIndex ++;
+            else hairIndex++;
             changedHairstyle = true;
         }
         else
@@ -93,7 +94,7 @@ public class CharacterCustomizer : MonoBehaviour
         if(up)
         {
             if(topIndex == tops.Length-1) topIndex = 0;
-            else topIndex ++;
+            else topIndex++;
             changedTop = true;
         }
         else
@@ -110,7 +111,7 @@ public class CharacterCustomizer : MonoBehaviour
         if(up)
         {
             if(bottomIndex == bottoms.Length-1) bottomIndex = 0;
-            else bottomIndex ++;
+            else bottomIndex++;
             changedBottom = true;
         }
         else
@@ -127,7 +128,7 @@ public class CharacterCustomizer : MonoBehaviour
         if(up)
         {
             if(shoeIndex == shoes.Length-1) shoeIndex = 0;
-            else shoeIndex ++;
+            else shoeIndex++;
             changedShoes = true;
         }
         else
@@ -142,7 +143,7 @@ public class CharacterCustomizer : MonoBehaviour
     {
         SpriteRenderer sprite = spriteGO.GetComponent<SpriteRenderer>();
         ColorContainer colorContainer = spriteGO.GetComponent<ColorContainer>();
-        int colorIndex = colorContainer.colorIndex;
+        colorIndex = colorContainer.colorIndex;
 
         if(up)
         {
@@ -156,6 +157,7 @@ public class CharacterCustomizer : MonoBehaviour
         }
 
         sprite.color = colors[colorIndex];
+        colorContainer.colorIndex = colorIndex;
     }
 
     public void ColorChange(GameObject button)
@@ -166,22 +168,23 @@ public class CharacterCustomizer : MonoBehaviour
         bool up = buttonInfo.up;
 
         ColorContainer colorContainer = spriteGO.GetComponent<ColorContainer>();
-        int colorIndex = colorContainer.colorIndex;
+        colorIndex = colorContainer.colorIndex;
 
         if(up)
         {
+            Debug.Log(colorIndex + " before");
             if(colorIndex == colors.Length-1) colorIndex = 0;
             else colorIndex++;
-            Debug.Log(colorIndex + " before");
         }
         else
         {
-            if(colorIndex == 0) colorIndex = colors.Length-1;
+            Debug.Log(colorIndex + " before");    
+            if(colorIndex == 0) colorIndex = colors.Length-1;        
             else colorIndex--;
-            Debug.Log(colorIndex + " before");
         }
 
         Debug.Log(colorIndex + " after");
         sprite.color = colors[colorIndex];
+        colorContainer.colorIndex = colorIndex;
     }
 }
