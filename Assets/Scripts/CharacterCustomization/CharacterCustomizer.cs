@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CharacterCustomizer : MonoBehaviour
 {
@@ -32,7 +33,10 @@ public class CharacterCustomizer : MonoBehaviour
     public int shoeIndex;
     bool changedShoes;
 
-
+    public TMP_Text hairstyleLabel;
+    public TMP_Text topLabel;
+    public TMP_Text bottomLabel;
+    public TMP_Text shoeLabel;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +44,12 @@ public class CharacterCustomizer : MonoBehaviour
         player = GameObject.Find("Player");
 
         player.transform.localScale = new Vector3(1.5f, 1.5f, transform.localScale.z);
+
+        //get the right index
+        hairstyleLabel.text = "Hair No. " + (hairIndex + 1);
+        topLabel.text = "Top No. " + (topIndex + 1);
+        bottomLabel.text = "Bottoms No. " + (bottomIndex + 1);
+        shoeLabel.text = "Shoes No. " + (shoeIndex + 1);
     }
 
     // Update is called once per frame
@@ -66,6 +76,8 @@ public class CharacterCustomizer : MonoBehaviour
             changedHairstyle = true;
         }
 
+        hairstyleLabel.text = "Hair No. " + hairIndex;
+
     }
 
     public void TopChange(bool up)
@@ -83,6 +95,7 @@ public class CharacterCustomizer : MonoBehaviour
             changedTop = true;
         }
 
+        topLabel.text = "Top No. " + topIndex;
     }
 
     public void BottomChange(bool up)
@@ -100,6 +113,8 @@ public class CharacterCustomizer : MonoBehaviour
             changedBottom = true;
         }
 
+        bottomLabel.text = "Bottoms No. " + bottomIndex;
+
     }
 
     public void ShoeChange(bool up)
@@ -116,6 +131,9 @@ public class CharacterCustomizer : MonoBehaviour
             else shoeIndex--;
             changedShoes = true;
         }
+
+        shoeLabel.text = "Shoes No. " + shoeIndex;
+
     }
 
     public void ColorChange(GameObject spriteGO, bool up)

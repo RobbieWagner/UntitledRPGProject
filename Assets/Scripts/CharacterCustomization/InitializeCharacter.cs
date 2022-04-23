@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InitializeCharacter : MonoBehaviour
 {
@@ -25,10 +26,14 @@ public class InitializeCharacter : MonoBehaviour
     public SpriteRenderer shoe;
     public ClothingInfo shoeInfo;
 
+    public TMP_Text hairstyleLabel;
+    public TMP_Text topLabel;
+    public TMP_Text bottomLabel;
+    public TMP_Text shoeLabel;
+
     // Start is called before the first frame update
     void Start()
     {
-
         typePassed = false;
 
         if(player != null)

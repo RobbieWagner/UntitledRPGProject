@@ -12,13 +12,11 @@ public class KillCopies : MonoBehaviour
         if(instance == null)
         {    
             count++;
-            Debug.Log(count);
             instance = this; // In first scene, make us the instance
             DontDestroyOnLoad(gameObject);
         }
         else if(instance != this)
         {
-            Debug.Log("hi");
             Destroy(this.gameObject); // If object copy wakes up, destroy itself
         }
     } 
