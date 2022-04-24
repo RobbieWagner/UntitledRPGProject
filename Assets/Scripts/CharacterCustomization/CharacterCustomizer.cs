@@ -41,7 +41,7 @@ public class CharacterCustomizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("player");
 
         player.transform.localScale = new Vector3(1.5f, 1.5f, transform.localScale.z);
 
