@@ -2129,13 +2129,13 @@ MonoBehaviour:
   - {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
   colorIndex: 0
   hair: {fileID: 412005553}
-  hairIndex: 0
+  hairInfo: {fileID: 412005554}
   top: {fileID: 1800064868}
-  topIndex: 0
+  topInfo: {fileID: 1800064869}
   bottom: {fileID: 1369611673}
-  bottomIndex: 0
+  bottomInfo: {fileID: 1369611674}
   shoe: {fileID: 1245508084}
-  shoeIndex: 0
+  shoeInfo: {fileID: 1245508085}
   hairstyleLabel: {fileID: 1569338875}
   topLabel: {fileID: 590934930}
   bottomLabel: {fileID: 174752093}

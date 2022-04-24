@@ -18,19 +18,19 @@ public class CharacterCustomizer : MonoBehaviour
     public int colorIndex;
 
     public SpriteRenderer hair;
-    public int hairIndex;
+    public ClothingInfo hairInfo;
     bool changedHairstyle;
 
     public SpriteRenderer top;
-    public int topIndex;
+    public ClothingInfo topInfo;
     bool changedTop;
 
     public SpriteRenderer bottom;
-    public int bottomIndex;
+    public ClothingInfo bottomInfo;
     bool changedBottom;
 
     public SpriteRenderer shoe;
-    public int shoeIndex;
+    public ClothingInfo shoeInfo;
     bool changedShoes;
 
     public TMP_Text hairstyleLabel;
@@ -46,37 +46,37 @@ public class CharacterCustomizer : MonoBehaviour
         player.transform.localScale = new Vector3(1.5f, 1.5f, transform.localScale.z);
 
         //get the right index
-        hairstyleLabel.text = "Hair No. " + (hairIndex + 1);
-        topLabel.text = "Top No. " + (topIndex + 1);
-        bottomLabel.text = "Bottoms No. " + (bottomIndex + 1);
-        shoeLabel.text = "Shoes No. " + (shoeIndex + 1);
+        hairstyleLabel.text = "Hair No. " + (hairInfo.clothingIndex + 1);
+        topLabel.text = "Top No. " + (topInfo.clothingIndex + 1);
+        bottomLabel.text = "Bottoms No. " + (bottomInfo.clothingIndex + 1);
+        shoeLabel.text = "Shoes No. " + (shoeInfo.clothingIndex + 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(changedHairstyle) hair.sprite = hairstyles[hairIndex];
-        if(changedTop) top.sprite = tops[topIndex];
-        if(changedBottom) bottom.sprite = bottoms[bottomIndex];
-        if(changedShoes) shoe.sprite = shoes[shoeIndex];
+        if(changedHairstyle) hair.sprite = hairstyles[hairInfo.clothingIndex];
+        if(changedTop) top.sprite = tops[topInfo.clothingIndex];
+        if(changedBottom) bottom.sprite = bottoms[bottomInfo.clothingIndex];
+        if(changedShoes) shoe.sprite = shoes[shoeInfo.clothingIndex];
     }
 
     public void HairstyleChange(bool up)
     {
         if(up)
         {
-            if(hairIndex == hairstyles.Length-1) hairIndex = 0;
-            else hairIndex++;
+            if(hairInfo.clothingIndex == hairstyles.Length-1) hairInfo.clothingIndex = 0;
+            else hairInfo.clothingIndex++;
             changedHairstyle = true;
         }
         else
         {
-            if(hairIndex == 0) hairIndex = hairstyles.Length-1;
-            else hairIndex--;
+            if(hairInfo.clothingIndex == 0) hairInfo.clothingIndex = hairstyles.Length-1;
+            else hairInfo.clothingIndex--;
             changedHairstyle = true;
         }
 
-        hairstyleLabel.text = "Hair No. " + hairIndex;
+        hairstyleLabel.text = "Hair No. " + (hairInfo.clothingIndex + 1);
 
     }
 
@@ -84,36 +84,36 @@ public class CharacterCustomizer : MonoBehaviour
     {
         if(up)
         {
-            if(topIndex == tops.Length-1) topIndex = 0;
-            else topIndex++;
+            if(topInfo.clothingIndex == tops.Length-1) topInfo.clothingIndex = 0;
+            else topInfo.clothingIndex++;
             changedTop = true;
         }
         else
         {
-            if(topIndex == 0) topIndex = tops.Length-1;
-            else topIndex--;
+            if(topInfo.clothingIndex == 0) topInfo.clothingIndex = tops.Length-1;
+            else topInfo.clothingIndex--;
             changedTop = true;
         }
 
-        topLabel.text = "Top No. " + topIndex;
+        topLabel.text = "Top No. " + (topInfo.clothingIndex + 1);
     }
 
     public void BottomChange(bool up)
     {
         if(up)
         {
-            if(bottomIndex == bottoms.Length-1) bottomIndex = 0;
-            else bottomIndex++;
+            if(bottomInfo.clothingIndex == bottoms.Length-1) bottomInfo.clothingIndex = 0;
+            else bottomInfo.clothingIndex++;
             changedBottom = true;
         }
         else
         {
-            if(bottomIndex == 0) bottomIndex = bottoms.Length-1;
-            else bottomIndex--;
+            if(bottomInfo.clothingIndex == 0) bottomInfo.clothingIndex = bottoms.Length-1;
+            else bottomInfo.clothingIndex--;
             changedBottom = true;
         }
 
-        bottomLabel.text = "Bottoms No. " + bottomIndex;
+        bottomLabel.text = "Bottoms No. " + (bottomInfo.clothingIndex + 1);
 
     }
 
@@ -121,18 +121,18 @@ public class CharacterCustomizer : MonoBehaviour
     {
         if(up)
         {
-            if(shoeIndex == shoes.Length-1) shoeIndex = 0;
-            else shoeIndex++;
+            if(shoeInfo.clothingIndex == shoes.Length-1) shoeInfo.clothingIndex = 0;
+            else shoeInfo.clothingIndex++;
             changedShoes = true;
         }
         else
         {
-            if(shoeIndex == 0) shoeIndex = shoes.Length-1;
-            else shoeIndex--;
+            if(shoeInfo.clothingIndex == 0) shoeInfo.clothingIndex = shoes.Length-1;
+            else shoeInfo.clothingIndex--;
             changedShoes = true;
         }
 
-        shoeLabel.text = "Shoes No. " + shoeIndex;
+        shoeLabel.text = "Shoes No. " + (shoeInfo.clothingIndex + 1);
 
     }
 
